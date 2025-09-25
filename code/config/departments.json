@@ -1,0 +1,7 @@
+{
+    "Dentistry": ["dentist", "dental", "dentistry"],
+    "Cardiology": ["cardio", "cardiologist", "cardiology"],
+    "Dermatology": ["derm", "dermatologist", "skin"],
+    "General Practice": ["doctor", "physician", "clinic"]
+}
+  

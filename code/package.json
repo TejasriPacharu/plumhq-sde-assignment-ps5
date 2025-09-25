@@ -12,8 +12,18 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "ajv": "^8.17.1",
+    "axios": "^1.12.2",
+    "chrono-node": "^2.9.0",
+    "compromise": "^14.14.4",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "luxon": "^3.7.2",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.10",
+    "sharp": "^0.34.4",
+    "tesseract.js": "^6.0.1",
+    "uuid": "^13.0.0",
+    "winston": "^3.17.0"
   }
 }
