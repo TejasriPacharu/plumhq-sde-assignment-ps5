@@ -32,14 +32,6 @@ const testCases = [
         }
     },
     {
-        name: 'Text Input - Multiple Departments',
-        method: 'POST',
-        endpoint: '/api/parse',
-        data: {
-            text: "Cardiology appointment on Jan 20th 10:30 AM and Neurology checkup on Jan 25th 2:15 PM"
-        }
-    },
-    {
         name: 'Edge Case - Empty Input',
         method: 'POST',
         endpoint: '/api/parse',

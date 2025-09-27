@@ -94,19 +94,37 @@ code/
 **Request Examples:**
 
 ```bash
-# Text Input
+# Text Input format
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"text": "Book dentist next Friday at 3pm"}' \
   https://your-api-url/api/parse
 
-# Image Upload
+# Image Upload format
 curl -X POST \
   -F 'text=Check my appointment' \
   -F 'image=@appointment.jpg' \
   https://your-api-url/api/parse
-```
 
+# Demo Example - 1
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Meeting with orthopedic doctor next Friday at 2pm"}' \
+  https://ai-powered-assignment-scheduler-plumhq.onrender.com/api/parse
+
+# Demo Example - 2
+curl -X POST \
+  -F 'text=Check my appointment details' \
+  -F 'image=@utils/image_trail3.png' \
+  https://ai-powered-assignment-scheduler-plumhq.onrender.com/api/parse
+
+# Demo Example - 3
+curl -X POST \
+  -F 'image=@utils/image_trail3.png' \
+  https://ai-powered-assignment-scheduler-plumhq.onrender.com/api/parse
+
+```  
+    
 ## Guradrails, Error Types & Edge Cases
 
 ### Implemented Edge Cases:
@@ -287,9 +305,7 @@ node test-deployed-api.js
 - Malicious content detection
 - File type and size validation
 - Rate limiting protection
-- Automatic file cleanup
 - Error message sanitization
-- CORS protection ready
 
 ---
 
