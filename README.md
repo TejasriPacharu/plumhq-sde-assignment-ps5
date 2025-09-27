@@ -3,6 +3,9 @@
 ## Problem Statement
 Build a backend service that parses natural language or document-based appointment requests and converts them into structured scheduling data. The system handles both typed text and noisy image inputs (e.g., scanned notes, emails) through a 4-step pipeline: OCR → Entity Extraction → Normalization → Final JSON output with guardrails for ambiguity.
 
+## Video Link 
+https://www.loom.com/share/b1bdf8817586479ea0d63ec300bd044b?sid=2a13e112-0d2c-4ace-b0f3-88ab81948ba0
+
 ## Architecture
 
 ```
