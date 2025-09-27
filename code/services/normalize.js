@@ -12,6 +12,7 @@ async function normalizeEntities(entities) {
         };
     }
 
+    // Create reference date in Asia/Kolkata timezone
     const refDate = DateTime.now().setZone("Asia/Kolkata").toJSDate();
 
     const dateString = date.includes(time) ? date : `${date} ${time}`;
@@ -29,7 +30,19 @@ async function normalizeEntities(entities) {
         return {status: "needs_clarification", message: "Unable to parse date/time"};
     }
 
-    const dt = DateTime.fromJSDate(parsedDate).setZone("Asia/Kolkata");
+    // FIX: The key issue is that chrono-node returns dates in the server's local timezone,
+    // but we want to interpret the parsed time as if it's already in Asia/Kolkata.
+    // Instead of converting timezones, we extract the date/time components and 
+    // create a new DateTime object in Asia/Kolkata timezone.
+    const dt = DateTime.fromObject({
+        year: parsedDate.getFullYear(),
+        month: parsedDate.getMonth() + 1, // JS months are 0-indexed
+        day: parsedDate.getDate(),
+        hour: parsedDate.getHours(),
+        minute: parsedDate.getMinutes(),
+        second: parsedDate.getSeconds()
+    }, { zone: 'Asia/Kolkata' });
+    
     const now = DateTime.now().setZone("Asia/Kolkata");
 
     if(dt <= now) {
