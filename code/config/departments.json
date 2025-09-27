@@ -1,7 +1,30 @@
-{
-    "Dentistry": ["dentist", "dental", "dentistry"],
-    "Cardiology": ["cardio", "cardiologist", "cardiology"],
-    "Dermatology": ["derm", "dermatologist", "skin"],
-    "General Practice": ["doctor", "physician", "clinic"]
-}
-  
+[
+    {
+        "name": "Dentistry",
+        "synonyms": ["dentist", "dental", "dentistry", "tooth", "teeth"]
+    },
+    {
+        "name": "Cardiology", 
+        "synonyms": ["cardio", "cardiologist", "cardiology", "heart", "cardiac"]
+    },
+    {
+        "name": "Dermatology",
+        "synonyms": ["derm", "dermatologist", "skin", "dermatology"]
+    },
+    {
+        "name": "General Practice",
+        "synonyms": ["doctor", "physician", "clinic", "general", "gp"]
+    },
+    {
+        "name": "Orthopedics",
+        "synonyms": ["orthopedic", "ortho", "bone", "joint", "orthopedics"]
+    },
+    {
+        "name": "Neurology",
+        "synonyms": ["neuro", "neurologist", "brain", "neurology"]
+    },
+    {
+        "name": "Pediatrics",
+        "synonyms": ["pediatric", "pediatrician", "child", "kids", "pediatrics"]
+    }
+]
