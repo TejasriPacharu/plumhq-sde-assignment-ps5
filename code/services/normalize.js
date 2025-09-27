@@ -29,10 +29,7 @@ async function normalizeEntities(entities) {
     if(!parsedDate) {
         return {status: "needs_clarification", message: "Unable to parse date/time"};
     }
-
-    // FIX: The key issue is that chrono-node returns dates in the server's local timezone,
-    // but we want to interpret the parsed time as if it's already in Asia/Kolkata.
-    // Instead of converting timezones, we extract the date/time components and 
+ 
     // create a new DateTime object in Asia/Kolkata timezone.
     const dt = DateTime.fromObject({
         year: parsedDate.getFullYear(),
@@ -73,8 +70,6 @@ async function normalizeEntities(entities) {
         confidence += 0.05;
     }
     
-    // Check if the parsed result has good certainty based on available data
-    // Instead of getCertainty(), we'll assess based on known values
     if (knownValueCount >= 3) {
         confidence += 0.05; // Good amount of parsed information
     }
