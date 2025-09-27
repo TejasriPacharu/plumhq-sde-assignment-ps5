@@ -30,7 +30,7 @@ code/
 └── test-deployed-api.js        # Comprehensive API testing script
 ```
 
-## 📋 File Functions & Components
+## File Functions & Components
 
 ### Core Files
 
@@ -259,23 +259,17 @@ The project includes comprehensive testing tools:
 node test-deployed-api.js
 ```
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
-### Planned Improvements:
+### Other Improvements:
 - **API Authentication** - JWT-based security system
 - **Advanced OCR** - Support for handwritten text recognition
-- **Multi-language Support** - Internationalization for different languages
 - **Database Integration** - Persistent appointment storage
-- **Real-time Notifications** - WebSocket-based appointment confirmations
 - **Advanced NLP** - Better entity extraction with transformer models
 - **Appointment Conflicts** - Scheduling conflict detection
-- **Calendar Integration** - Google Calendar, Outlook sync
 
 ### Additional Edge Cases:
-- Recurring appointment patterns
-- Multiple time zones support
-- Voice-to-text integration
-- Batch appointment processing
+- Duration of the appointment scheduling (like the appointment is schedueled on 24th August and the current month is September, but didn't mention the year, so do we need to consider this as past date or next year)
 - Advanced image preprocessing for poor quality scans
 
 ## Performance Metrics
